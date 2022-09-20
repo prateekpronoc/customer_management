@@ -2,9 +2,9 @@ const { models } = require('../../sequelize');
 const { getIdParam } = require('../helpers');
 
 async function getAll(req, res) {;
-	console.log(models);
-	const users = await models.customers.findAndCountAll();
-	res.status(200).json(users);
+    console.log(models);
+	const customers = await models.customers.findAndCountAll();
+	res.status(200).json(customers);
 };
 
 async function getById(req, res) {

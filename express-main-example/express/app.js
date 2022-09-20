@@ -5,6 +5,7 @@ const routes = {
 	users: require('./routes/users'),
 	instruments: require('./routes/instruments'),
 	orchestras: require('./routes/orchestras'),
+	customers : require('./routes/customers')
 	// Add more routes here...
 	// items: require('./routes/items'),
 };
@@ -44,7 +45,7 @@ app.get('/', (req, res) => {
 for (const [routeName, routeController] of Object.entries(routes)) {
 	if (routeController.getAll) {
 		app.get(
-			`/api/${routeName}`,
+			`/api/vch/v1/rc/${routeName}`,
 			makeHandlerAwareOfAsyncErrors(routeController.getAll)
 		);
 	}
