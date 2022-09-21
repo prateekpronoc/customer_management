@@ -20,7 +20,7 @@ module.exports = (sequelize) => {
             allowNull:false,
             type: DataTypes.STRING
         },
-        mobile_no :{
+        contact_no :{
             allowNull:false,
             type: DataTypes.STRING
         },
@@ -28,10 +28,16 @@ module.exports = (sequelize) => {
             allowNull:false,
             type: DataTypes.STRING
         },
-        created_at :{
-            allowNull : false,
-            type : DataTypes.DATE
-        }
+        created_at: {
+            type: 'TIMESTAMP',
+            // defaultValue: sequelize.literal('CURRENT_TIMESTAMP'),
+            allowNull: true
+          },
+          updated_at: {
+            type: 'TIMESTAMP',
+            // defaultValue: sequelize.literal('CURRENT_TIMESTAMP'),
+            allowNull: true
+          }
         
 	},{
         timestamps: false

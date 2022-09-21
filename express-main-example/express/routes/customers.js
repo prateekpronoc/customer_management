@@ -1,6 +1,6 @@
 const { models } = require('../../sequelize');
 const { getIdParam } = require('../helpers');
-
+const crypto = require('crypto');
 async function getAll(req, res) {;
     console.log(models);
 	const customers = await models.customers.findAndCountAll();
@@ -21,8 +21,10 @@ async function create(req, res) {
 	if (req.body.id) {
 		res.status(400).send(`Bad request: ID should not be provided, since it is determined automatically by the database.`)
 	} else {
-		await models.user.create(req.body);
-		res.status(201).end();
+		req.body.customer_uuid = crypto.randomUUID()
+		// console.log();
+	const cust = 	await models.customers.create(req.body);
+		res.status(201).send(cust);
 	}
 };
 

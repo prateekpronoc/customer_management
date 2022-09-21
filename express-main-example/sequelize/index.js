@@ -5,11 +5,11 @@ const { applyExtraSetup } = require('./extra-setup');
 // But for this example, we will just use a local SQLite database.
 // const sequelize = new Sequelize(process.env.DB_CONNECTION_URL);
 const sequelize = new Sequelize(
-	'mobility_management',
-	'superadmin',
-	'tech.hp!',
+	'mobility_core',
+	'devuser',
+	'D3vus3R@2022#',
 	 {
-	   host: '139.59.57.10',
+	   host: '65.2.123.114',
 	   dialect: 'mysql'
 	 }
    );

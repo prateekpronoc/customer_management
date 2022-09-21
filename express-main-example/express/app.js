@@ -5,7 +5,7 @@ const routes = {
 	users: require('./routes/users'),
 	instruments: require('./routes/instruments'),
 	orchestras: require('./routes/orchestras'),
-	customers : require('./routes/customers')
+	customer : require('./routes/customers')
 	// Add more routes here...
 	// items: require('./routes/items'),
 };
@@ -44,8 +44,7 @@ app.get('/', (req, res) => {
 // We define the standard REST APIs for each route (if they exist).
 for (const [routeName, routeController] of Object.entries(routes)) {
 	if (routeController.getAll) {
-		app.get(
-			`/api/vch/v1/rc/${routeName}`,
+		app.get(`/api/vch/v1/rc/${routeName}`,
 			makeHandlerAwareOfAsyncErrors(routeController.getAll)
 		);
 	}
@@ -57,7 +56,7 @@ for (const [routeName, routeController] of Object.entries(routes)) {
 	}
 	if (routeController.create) {
 		app.post(
-			`/api/${routeName}`,
+			`/api/vch/v1/rc/${routeName}`,
 			makeHandlerAwareOfAsyncErrors(routeController.create)
 		);
 	}
