@@ -5,7 +5,8 @@ const routes = {
 	users: require('./routes/users'),
 	instruments: require('./routes/instruments'),
 	orchestras: require('./routes/orchestras'),
-	customer : require('./routes/customers')
+	customer : require('./routes/customers'),
+	firebaseRoutes : require('./routes/firebaseNotification')
 	// Add more routes here...
 	// items: require('./routes/items'),
 };

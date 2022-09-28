@@ -16,7 +16,8 @@ const sequelize = new Sequelize(
 
 const modelDefiners = [
 	require('./models/user.model'),
-	require('./models/customer.model')
+	require('./models/customer.model'),
+	require('./models/firebaseNotification.model')
 	// require('./models/instrument.model'),
 	// require('./models/orchestra.model'),
 	// Add more models here...
