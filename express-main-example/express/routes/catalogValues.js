@@ -2,11 +2,11 @@ const { models } = require('../../sequelize');
 const { getIdParam } = require('../helpers');
 const crypto = require('crypto');
 async function getAll(req, res) {;
-    // console.log(models);
+    console.log(models);
 	const limit = req.query.pageSize ? +(req.query.pageSize) : 10;
 	// const offset = const limit = size ? +size : 3;
 	const offset = req.query.page ? req.query.page * limit : 0;
-	const customers = await models.customers.findAndCountAll({
+	const customers = await models.catalog_values.findAndCountAll({
 		limit,
   offset
 	}
@@ -23,13 +23,9 @@ async function getAll(req, res) {;
 
 async function getById(req, res) {
 	const id = getIdParam(req);
-	const user = await models.customers.findByPk(id);
+	const user = await models.user.findByPk(id);
 	if (user) {
-		let returnObj = {
-			status:'success',
-			data : user
-		}
-		res.status(200).json(returnObj);
+		res.status(200).json(user);
 	} else {
 		res.status(404).send('404 - Not found');
 	}
@@ -39,9 +35,9 @@ async function create(req, res) {
 	if (req.body.id) {
 		res.status(400).send(`Bad request: ID should not be provided, since it is determined automatically by the database.`)
 	} else {
-		req.body.customer_uuid = crypto.randomUUID()
+		// req.body.customer_uuid = crypto.randomUUID()
 		// console.log();
-	const cust = 	await models.customers.create(req.body);
+	const cust = 	await models.catalog_values.create(req.body);
 		res.status(201).send(cust);
 	}
 };

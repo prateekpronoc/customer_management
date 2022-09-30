@@ -6,7 +6,8 @@ const routes = {
 	instruments: require('./routes/instruments'),
 	orchestras: require('./routes/orchestras'),
 	customer : require('./routes/customers'),
-	firebaseRoutes : require('./routes/firebaseNotification')
+	firebaseRoutes : require('./routes/firebaseNotification'),
+	catalogValue : require('./routes/catalogValues')
 	// Add more routes here...
 	// items: require('./routes/items'),
 };
@@ -51,7 +52,7 @@ for (const [routeName, routeController] of Object.entries(routes)) {
 	}
 	if (routeController.getById) {
 		app.get(
-			`/api/${routeName}/:id`,
+			`/api/vch/v1/urd/${routeName}/:id`,
 			makeHandlerAwareOfAsyncErrors(routeController.getById)
 		);
 	}
