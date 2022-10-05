@@ -42,6 +42,7 @@ async function create(req, res) {
 		req.body.application_uuid = crypto.randomUUID();
 		req.body.application_code = (req.body.district).slice(0, 2) + (req.body.mobile_no).slice(-4) + (req.body.block).slice(0, 2);
 		req.body.application_code = (req.body.application_code).toUpperCase();
+		req.body.application_status= 'Under Observation';
 		// console.log();
 		// res.status(201).send(req.body);
 	const cust = 	await models.goshala_registrations.create(req.body);
