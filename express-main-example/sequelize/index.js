@@ -19,7 +19,8 @@ const modelDefiners = [
 	require('./models/customer.model'),
 	require('./models/firebaseNotification.model'),
 	require('./models/catalogValues'),
-	require('./models/registration')
+	require('./models/registration'),
+	require('./models/bookingConfig.model')
 	// require('./models/instrument.model'),
 	// require('./models/orchestra.model'),
 	// Add more models here...

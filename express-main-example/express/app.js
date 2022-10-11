@@ -8,7 +8,8 @@ const routes = {
 	customer : require('./routes/customers'),
 	firebaseRoutes : require('./routes/firebaseNotification'),
 	catalogValue : require('./routes/catalogValues'),
-	registartion : require('./routes/registration')
+	registartion : require('./routes/registration'),
+	bookingConfig : require('./routes/bookingConfig')
 	// Add more routes here...
 	// items: require('./routes/items'),
 };
@@ -53,7 +54,7 @@ app.get('/', (req, res) => {
 
 // We define the standard REST APIs for each route (if they exist).
 for (const [routeName, routeController] of Object.entries(routes)) {
-	// console.log(routes);
+	//  console.log(routes);
 	if (routeController.getAll) {
 		app.get(`/api/vch/v1/rc/${routeName}`,
 			makeHandlerAwareOfAsyncErrors(routeController.getAll)
