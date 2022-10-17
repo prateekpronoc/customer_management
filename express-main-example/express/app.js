@@ -74,7 +74,7 @@ for (const [routeName, routeController] of Object.entries(routes)) {
 	}
 	if (routeController.update) {
 		app.put(
-			`/api/${routeName}/:id`,
+			`/api/vch/v1/urd/${routeName}/:id`,
 			makeHandlerAwareOfAsyncErrors(routeController.update)
 		);
 	}

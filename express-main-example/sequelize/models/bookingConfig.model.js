@@ -36,7 +36,7 @@ module.exports = (sequelize) => {
             allowNull : true,
             type :DataTypes.DOUBLE
         },
-        airpot_pickup_charges :{
+        airport_pickup_charges :{
             allowNull : true,
             type :DataTypes.DOUBLE
         },
