@@ -14,7 +14,8 @@ module.exports = (sequelize) => {
 		},
 		name: {
 			allowNull: false,
-			type: DataTypes.STRING
+			type: DataTypes.STRING,
+            field : 'customerName'
 		},
         contact_email :{
             allowNull:false,

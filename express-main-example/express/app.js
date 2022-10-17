@@ -9,7 +9,8 @@ const routes = {
 	firebaseRoutes : require('./routes/firebaseNotification'),
 	catalogValue : require('./routes/catalogValues'),
 	registartion : require('./routes/registration'),
-	bookingConfig : require('./routes/bookingConfig')
+	bookingConfig : require('./routes/bookingConfig'),
+	vehicleDeliveryTracking : require('./routes/vehicleDeliveryTracking')
 	// Add more routes here...
 	// items: require('./routes/items'),
 };

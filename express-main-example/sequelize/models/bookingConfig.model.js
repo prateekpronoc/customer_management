@@ -14,7 +14,7 @@ module.exports = (sequelize) => {
         },
         min_booking_hr :{
             allowNull : true,
-            type : DataTypes.DOUBLE
+            type : DataTypes.DOUBLE,
         },
         booking_buffer_min :{
             allowNull : true,
