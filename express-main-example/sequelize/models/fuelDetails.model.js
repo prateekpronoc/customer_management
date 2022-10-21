@@ -63,11 +63,17 @@ module.exports = (sequelize) => {
             allowNull: true,
             field : 'created_on'
           },
-          modifiedOm: {
+          modifiedOn: {
             type: 'TIMESTAMP',
             // defaultValue: sequelize.literal('CURRENT_TIMESTAMP'),
             allowNull: true,
             field : 'modified_on'
+          },
+          filledDate: {
+            type: DataTypes.DATE,
+            // defaultValue: sequelize.literal('CURRENT_TIMESTAMP'),
+            allowNull: true,
+            field : 'filled_date'
           }
         
 	},{
