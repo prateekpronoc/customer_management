@@ -21,7 +21,8 @@ const modelDefiners = [
 	require('./models/catalogValues'),
 	require('./models/registration'),
 	require('./models/bookingConfig.model'),
-	require('./models/trankingLinks')
+	require('./models/trankingLinks'),
+	require('./models/fuelDetails.model')
 	// require('./models/instrument.model'),
 	// require('./models/orchestra.model'),
 	// Add more models here...

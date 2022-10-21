@@ -10,7 +10,8 @@ const routes = {
 	catalogValue : require('./routes/catalogValues'),
 	registartion : require('./routes/registration'),
 	bookingConfig : require('./routes/bookingConfig'),
-	vehicleDeliveryTracking : require('./routes/vehicleDeliveryTracking')
+	vehicleDeliveryTracking : require('./routes/vehicleDeliveryTracking'),
+	fuelDetails : require('./routes/fuelDetails')
 	// Add more routes here...
 	// items: require('./routes/items'),
 };
