@@ -39,7 +39,7 @@ async function create(req, res) {
 	if (req.body.id) {
 		res.status(400).send(`Bad request: ID should not be provided, since it is determined automatically by the database.`)
 	} else {
-		req.body.customer_uuid = crypto.randomUUID()
+		req.body.customer_uuid = crypto.randomBytes(20).toString('hex');
 		// console.log();
 	const cust = 	await models.customers.create(req.body);
 		res.status(201).send(cust);
