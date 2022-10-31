@@ -40,6 +40,21 @@ module.exports = (sequelize) => {
             allowNull : true,
             type :DataTypes.DOUBLE
         },
+        minExtensionHrs :{
+            allowNull : true,
+            type :DataTypes.DOUBLE,
+            field :'min_extension_hrs'
+        },
+        maxExtensionHrs :{
+            allowNull : true,
+            type :DataTypes.DOUBLE,
+            field :'max_extension_hrs'
+        },
+        extensionCount :{
+            allowNull : true,
+            type :DataTypes.DOUBLE,
+            field :'extension_count'
+        },
         created_on :{
             type: 'TIMESTAMP',
             // defaultValue: sequelize.literal('CURRENT_TIMESTAMP'),
